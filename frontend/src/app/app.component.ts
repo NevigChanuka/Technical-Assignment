@@ -1,12 +1,19 @@
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {BookFormComponent} from './book-form/book-form.component';
+import {BookListComponent} from './book-list/book-list.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [BookFormComponent, BookListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
-  title = 'frontend';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+
 }
